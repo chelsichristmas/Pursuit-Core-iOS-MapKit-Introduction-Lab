@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		6B61AB3D240EBD8B00E13729 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B61AB3B240EBD8B00E13729 /* Main.storyboard */; };
 		6B61AB3F240EBD9100E13729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B61AB3E240EBD9100E13729 /* Assets.xcassets */; };
 		6B61AB42240EBD9100E13729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B61AB40240EBD9100E13729 /* LaunchScreen.storyboard */; };
+		6B61AB4A240ECE8200E13729 /* CoreLocationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B61AB49240ECE8200E13729 /* CoreLocationSession.swift */; };
+		6B61AB4C240EE9BB00E13729 /* NYCOpenDataAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B61AB4B240EE9BB00E13729 /* NYCOpenDataAPIClient.swift */; };
+		6B61AB4F240EEA7D00E13729 /* NetworkHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 6B61AB4E240EEA7D00E13729 /* NetworkHelper */; };
+		6B61AB51240EEAC900E13729 /* OpenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B61AB50240EEAC900E13729 /* OpenData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		6B61AB3E240EBD9100E13729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B61AB41240EBD9100E13729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B61AB43240EBD9100E13729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B61AB49240ECE8200E13729 /* CoreLocationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationSession.swift; sourceTree = "<group>"; };
+		6B61AB4B240EE9BB00E13729 /* NYCOpenDataAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCOpenDataAPIClient.swift; sourceTree = "<group>"; };
+		6B61AB50240EEAC900E13729 /* OpenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B61AB4F240EEA7D00E13729 /* NetworkHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,14 +65,25 @@
 			isa = PBXGroup;
 			children = (
 				6B61AB35240EBD8B00E13729 /* AppDelegate.swift */,
+				6B61AB52240EEB8B00E13729 /* Models */,
 				6B61AB37240EBD8B00E13729 /* SceneDelegate.swift */,
 				6B61AB39240EBD8B00E13729 /* ViewController.swift */,
+				6B61AB49240ECE8200E13729 /* CoreLocationSession.swift */,
+				6B61AB4B240EE9BB00E13729 /* NYCOpenDataAPIClient.swift */,
 				6B61AB3B240EBD8B00E13729 /* Main.storyboard */,
 				6B61AB3E240EBD9100E13729 /* Assets.xcassets */,
 				6B61AB40240EBD9100E13729 /* LaunchScreen.storyboard */,
 				6B61AB43240EBD9100E13729 /* Info.plist */,
 			);
 			path = "MapKit-Lab";
+			sourceTree = "<group>";
+		};
+		6B61AB52240EEB8B00E13729 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B61AB50240EEAC900E13729 /* OpenData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +102,9 @@
 			dependencies = (
 			);
 			name = "MapKit-Lab";
+			packageProductDependencies = (
+				6B61AB4E240EEA7D00E13729 /* NetworkHelper */,
+			);
 			productName = "MapKit-Lab";
 			productReference = 6B61AB32240EBD8B00E13729 /* MapKit-Lab.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 6B61AB29240EBD8B00E13729;
+			packageReferences = (
+				6B61AB4D240EEA7D00E13729 /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */,
+			);
 			productRefGroup = 6B61AB33240EBD8B00E13729 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B61AB4C240EE9BB00E13729 /* NYCOpenDataAPIClient.swift in Sources */,
 				6B61AB3A240EBD8B00E13729 /* ViewController.swift in Sources */,
 				6B61AB36240EBD8B00E13729 /* AppDelegate.swift in Sources */,
+				6B61AB51240EEAC900E13729 /* OpenData.swift in Sources */,
+				6B61AB4A240ECE8200E13729 /* CoreLocationSession.swift in Sources */,
 				6B61AB38240EBD8B00E13729 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B61AB4D240EEA7D00E13729 /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/NetworkHelperSPM";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B61AB4E240EEA7D00E13729 /* NetworkHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B61AB4D240EEA7D00E13729 /* XCRemoteSwiftPackageReference "NetworkHelperSPM" */;
+			productName = NetworkHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6B61AB2A240EBD8B00E13729 /* Project object */;
 }
